@@ -14,6 +14,6 @@
 #set heading(numbering: "1.")
 #outline()
 
-#include "supervised.typ"
-
 #include "unsupervised.typ"
+
+#include "supervised.typ"

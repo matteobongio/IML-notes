@@ -235,6 +235,10 @@ Local outlier factor assigns to each object a degree of being an outlier.
 + Compute the LOF score by comparing the LRD of a point $x$ to the LRD of its neighbours. if much lower, it is an outlier
 
 == Vector Quantization, data representation by prototypes
+- VQ is related to clustering, but it is not the same thing
+
+==== Vector Quantization
+- Updates onlt the winner, random sequential presentation of single examples, learning rate controls he step size of updates
 
 - Initialize K prototype vectors
 - loop:
@@ -242,9 +246,19 @@ Local outlier factor assigns to each object a degree of being an outlier.
    - Identify the closest prototype (winner)
    - move the winner even closer towards the example
 
-competitive VQ (and K-means) aim at optimizing a *cost function*
+_competitive VQ and K-means aim at optimizing a *cost function*_
 
 *quantization error*: sum over all data points quantifies the quality of the representation
 
 ==== Lloyd's algorithm (K-means)
+- updates all prototypes, considers all data at a time
+
+0. Initialization
+   place K vectors $w^k$, (choose random data points)
+- loop:
+   + assign data to centers
+      assign ever datapoint to nearest center
+   + re-compute centers
+      compute the means of the K current clusters
+
 

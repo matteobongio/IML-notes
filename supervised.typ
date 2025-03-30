@@ -1,5 +1,14 @@
 = Supervised Learning
 ==  Classification
+
+=== Distance Based Classification 
+
+
+
+=== Prototype Based Supervised Learning
+
+
+
 == Regression
 find relationship between variables for extrapolation
 
