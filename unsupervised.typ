@@ -246,3 +246,5 @@ competitive VQ (and K-means) aim at optimizing a *cost function*
 
 *quantization error*: sum over all data points quantifies the quality of the representation
 
+==== Lloyd's algorithm (K-means)
+
