@@ -124,8 +124,8 @@ reference to external information
    *F-score*
    $
       "Precision" = frac(T P, T P + F P) \
-      "Recall" = frac(T N, T N + F P) \
-      F_"score" = 2 frac("Precision" * "Recall","Precision" + "Recall")
+      "Recall" = frac(T P, T P + F N) \
+      F_"score" = 2 frac("Precision" times "Recall","Precision" + "Recall")
    $
    - Receiver Operating Characteristics (ROC), Area Under the ROC Curve (AUC)
       #image("img/ROC.png", width: 80%)
