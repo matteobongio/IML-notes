@@ -38,7 +38,7 @@ Cons:
 
 == Learning Vector Quantization
 - Initialize prototype vectors for different classes
-- Present a sing example
+- Present a single example
 - Find the closest prototype
 - If same class:
   - move the prototype closer

@@ -121,8 +121,16 @@ reference to external information
 - *External Index*: measure the extent to which cluster labels match externally supplied class labels.
    - confusion matrix TP, TN, FP, FN 
       #image("img/confusionMatrix.png", width: 80%)
+   *F-score*
+   $
+      "Precision" = frac(T P, T P + F P) \
+      "Recall" = frac(T N, T N + F P) \
+      F_"score" = 2 frac("Precision" * "Recall","Precision" + "Recall")
+   $
    - Receiver Operating Characteristics (ROC), Area Under the ROC Curve (AUC)
       #image("img/ROC.png", width: 80%)
+
+
 
 === Desnsity-Based Spactial Clustering of Applications with Noise (DBSCAN)
 - Resistant to noise
@@ -257,7 +265,7 @@ _competitive VQ and K-means aim at optimizing a *cost function*_
    place K vectors $w^k$, (choose random data points)
 - loop:
    + assign data to centers
-      assign ever datapoint to nearest center
+      assign every datapoint to nearest center
    + re-compute centers
       compute the means of the K current clusters
 
