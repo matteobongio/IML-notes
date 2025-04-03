@@ -43,6 +43,8 @@ $ bold(Z)_i = frac(x_i - overline(x), sigma) $
 	- pick the smallest $d$ with a fractional variance that satisfies your threshold
 4. pick the first $d$ eigenvectors
 
+#align(center,image("img/dimensionality.png", width: 80%))
+
 === t-Distributed Stochastic Neighbor Embedding (t-SNE)
 - *Feature Extraction*
 - Drawbacks
@@ -60,11 +62,15 @@ Uses gradient descent to find the best locations for data in the low dim space.
 
 *Non-linear model*
 
+*Usage*: PCA is used as a *pre-processing* step for many ML algorithms, t-SNE can be used for *exploratory analysis*
+
 == Clustering, outlier detection, density estimation
 
 *Clustering analysis* is to partition a set of data points into groups
 such that points within the same group (a cluster) are more similar
 than to those in other groups (different clusters).
+
+*Clustering algorithms*: #align(center, image("img/clusteringAlgorithms.png", width: 80%, ))
 
 === Hierarchical clustering
 
@@ -93,7 +99,7 @@ cluster/ the root cluster.
 + Start with singletons
 + Compute dissimilarity matrix
 + while more than 1 cluser:
-   4. Merge 2 closest clusters
+   4. Merge 2 closest clusters, in case there are multiple "closest", merge all of them in 1 step
    + Update dissimilarity matrix
 
 ==== Divisive (top-down) clustering
@@ -120,15 +126,15 @@ reference to external information
    - *Silhouette score*
 - *External Index*: measure the extent to which cluster labels match externally supplied class labels.
    - confusion matrix TP, TN, FP, FN 
-      #image("img/confusionMatrix.png", width: 80%)
-   *F-score*
+      #align(center,image("img/confusionMatrix.png", width: 80%))
+   - *F-score*
    $
       "Precision" = frac(T P, T P + F P) \
       "Recall" = frac(T P, T P + F N) \
       F_"score" = 2 frac("Precision" times "Recall","Precision" + "Recall")
    $
    - Receiver Operating Characteristics (ROC), Area Under the ROC Curve (AUC)
-      #image("img/ROC.png", width: 80%)
+      #align(center,image("img/ROC.png", width: 80%))
 
 
 
@@ -192,6 +198,11 @@ Data points which are not density-reachable from at least one core point are kno
 
 _Note_: If $"MinPts"=2$, the result will be similar to hierarchical clustering
 with the single linkage, where the dendrogram is cut at height eps.
+
+*Eps*
+- k-nearest neighbour graph/search (k=MinPts-1)
+- find the "knee" (point where the distance starts going exponential)
+#align(center, image("img/knn.png", width: 80%))
 
 
 === Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN)
